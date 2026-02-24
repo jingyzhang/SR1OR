@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 1) bloodmnist_224 - [Link](https://medmnist.com/)
 2) pathmnist_224 - [Link](https://medmnist.com/)
-3) JSIEC-[Link](https://www.kaggle.com/datasets/linchundan/fundusimage1000)
+3) JSIEC - [Link](https://www.kaggle.com/datasets/linchundan/fundusimage1000)
 
 ## Data Format
 
