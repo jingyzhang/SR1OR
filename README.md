@@ -47,7 +47,6 @@ data
     ├── train
     ├── val
     ├── test
-
 ```
 
 ## Training and Validation
