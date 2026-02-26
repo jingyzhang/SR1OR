@@ -409,7 +409,7 @@ class Learner(BaseLearner):
             for i, (_, inputs, targets) in enumerate(train_loader):
                 inputs, targets = inputs.to(self._device), targets.to(self._device)
                 # logits = self._network(inputs)["logits"]
-                logits, ortho_loss, l2loss = self._network(inputs, ortho_loss=True)
+                logits, ortho_loss = self._network(inputs, ortho_loss=True)
                 logits = logits['logits'] 
                 # print(counts)
                 # print(logits.shape)
@@ -422,7 +422,7 @@ class Learner(BaseLearner):
                     logits[:, self._known_classes :], fake_targets
                 )
 
-                loss = ce + a_t * torch.mean(ortho_loss).to(self._device) + 0.7 * l2loss
+                loss = ce + a_t * torch.mean(ortho_loss).to(self._device)
 
                 optimizer.zero_grad()
                 loss.backward()
