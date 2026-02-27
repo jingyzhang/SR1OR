@@ -25,17 +25,6 @@ conda env create sr1or python==3.10.0
 conda activate sr1or
 pip install -r requirements.txt
 ```
-## Data Format
-
-```
-data
-└── bloodmnist_224
-    ├── train
-    ├── val
-    ├── test
-└── ...
-```
-
 ## Training and Validation
 
 ```
