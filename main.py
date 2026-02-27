@@ -18,22 +18,9 @@ def load_json(setting_path):
 
 def setup_parser():
     parser = argparse.ArgumentParser(description='Reproduce of multiple pre-trained incremental learning algorthms.')
-    # parser.add_argument('--config', type=str, default='./exps/simplecil.json',
-    #                     # help='Json file of settings.')
-    # parser.add_argument('--config', type=str, default='./exps/dualprompt_bloodmnist224.json',
-    #                     help='Json file of settings.')
     parser.add_argument('--config', type=str, default='./exps/sr1or_bloodmnist224.json',
                     help='Json file of settings.')
-    # parser.add_argument('--config', type=str, default='./exps/sdlora_pathmnist_224.json',
-    #                     help='Json file of settings.')
-    # parser.add_argument('--config', type=str, default='./exps/sdlora_organamnist_224.json',
-    #                     help='Json file of settings.')
-    # parser.add_argument('--seed', type=int, help='The seed value')
-    # parser.add_argument("--local_rank", type=int, default=0)
 
-
-    # parser.add_argument('--config', type=str, default='./exps/finetune_bloodmnist224.json',
-    #                     help='Json file of settings.')
     return parser
 
 if __name__ == '__main__':

@@ -50,9 +50,6 @@ def _train(args):
     _set_device(args)
     print_args(args)
 
-    """
-    准备数据集
-    """
     data_manager = DataManager(
         args["dataset"],
         args["shuffle"],
@@ -61,10 +58,7 @@ def _train(args):
         args["increment"],
         args,
     )
-    
-    """
-    准备模型
-    """
+
     args["nb_classes"] = data_manager.nb_classes # update args
     args["nb_tasks"] = data_manager.nb_tasks
     model = factory.get_model(args["model_name"], args)
@@ -73,9 +67,7 @@ def _train(args):
     cnn_curve, nme_curve = {"top1": []}, {"top1": []}
     cnn_matrix, nme_matrix = [], []
 
-    '''
-    开始增量学习大循环
-    '''
+
     for task in range(data_manager.nb_tasks):
         logging.info('**********************************************************')
 
