@@ -1,5 +1,3 @@
-# this is a direct copy from https://github.com/lukemelas/PyTorch-Pretrained-ViT.git
-
 
 import numpy as np
 from torch import nn
@@ -350,8 +348,6 @@ class ViT(nn.Module):
         pretrained (bool): Load pretrained weights
         in_channels (int): Number of channels in input data
         num_classes (int): Number of classes, default 1000
-    References:
-        [1] https://openreview.net/forum?id=YicbFdNTTy
     """
 
     def __init__(

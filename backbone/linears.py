@@ -1,7 +1,4 @@
-'''
-Reference:
-https://github.com/hshustc/CVPR19_Incremental_Learning/blob/master/cifar100-class-incremental/modified_linear.py
-'''
+
 import math
 import torch
 from torch import nn
